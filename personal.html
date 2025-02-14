@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Website</title>
+<style>
+body {
+font-family: 'Arial', sans-serif;
+margin: 0;
+padding: 0;
+background-color: #e8f5e9;
+color: #333;
+}
+header {
+background: #def108;
+color: #083ed4;
+padding: 20px;
+text-align: center;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+
+margin: 20px 0;
+
+}
+
+nav a {
+
+margin: 0 15px;
+
+color: #101010;
+
+text-decoration: none;
+
+padding: 10px 15px;
+
+background-color: #e69dc6;
+
+border-radius: 5px;
+
+transition: background-color 0.3s, color 0.3s;
+
+}
+
+nav a:hover {
+
+background-color: #098cf1;
+
+color: white;
+
+}
+
+.container {
+
+display: flex;
+
+padding: 20px;
+
+max-width: 1200px;
+
+margin: auto;
+
+flex-wrap: wrap;
+
+justify-content: center;
+
+}
+
+.image-left {
+
+flex: 1;
+
+text-align: center;
+
+padding-right: 20px;
+
+transition: transform 0.3s;
+
+}
+
+.image-left img {
+
+width: 250px;
+
+height: 250px;
+
+border-radius: 50%;
+
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.text-below {
+
+margin-top: 10px;
+
+text-align: left;
+
+}
+
+.content-area {
+
+flex: 2;
+
+display: none;
+
+background-color: #ff9800;
+
+padding: 20px;
+
+border-radius: 8px;
+
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+transition: opacity 0.3s ease;
+
+}
+
+.content-area.active {
+
+display: block;
+
+opacity: 1;
+
+}
+
+.image-right {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+gap: 10px;
+
+margin-top: 20px;
+
+}
+
+.image-right img {
+
+width: 100%;
+
+height: auto;
+
+border-radius: 5px;
+
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+}
+
+footer {
+
+margin-top: 20px;
+
+padding: 10px;
+
+text-align: center;
+
+background: #def108;
+
+}
+
+.project {
+
+margin-bottom: 20px;
+
+}
+
+.project-description {
+
+margin-top: 5px;
+
+text-align: center;
+
+font-size: 0.9em;
+
+color: #555;
+
+}
+
+.project-link {
+
+display: block;
+
+margin-top: 5px;
+
+color: #098cf1;
+
+text-decoration: none;
+
+}
+
+.project-link:hover {
+
+text-decoration: underline;
+
+}
+
+.skills {
+
+margin-top: 20px;
+
+}
+
+.skill {
+
+margin-bottom: 10px;
+
+}
+
+.skill-name {
+
+display: flex;
+
+justify-content: space-between;
+
+font-weight: bold;
+
+}
+
+.progress {
+
+background-color: #ddd;
+
+border-radius: 5px;
+
+overflow: hidden;
+
+height: 20px;
+
+}
+
+.progress-bar {
+
+height: 100%;
+
+background-color: #4caf50;
+
+text-align: center;
+
+color: white;
+
+line-height: 20px;
+
+}
+
+.contact-form {
+
+display: flex;
+
+flex-direction: column;
+
+margin-top: 20px;
+
+}
+
+.contact-form input,
+
+.contact-form textarea {
+
+margin-bottom: 10px;
+
+padding: 10px;
+
+border: 1px solid #ccc;
+
+border-radius: 5px;
+
+}
+
+.contact-form button {
+
+padding: 10px;
+
+background-color: #098cf1;
+
+color: white;
+
+border: none;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+transition: background-color 0.3s;
+
+}
+
+.contact-form button:hover {
+
+background-color: #0a6dbd;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Welcome To My Personal Website</h1>
+
+<nav>
+
+<a href="#" onclick="showSection('home')">Home</a>
+
+<a href="#" onclick="showSection('about')">About</a>
+
+<a href="#" onclick="showSection('contact')">Contact</a>
+
+<a href="#" onclick="showSection('portfolio')">Portfolio</a>
+
+<a href="#" onclick="showSection('resume')">Resume</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+<div class="image-left">
+<img src="C:\Users\A\Desktop\lamicho\my image\photo_2025-02-12_09-39-37.jpg"alt="Your Image">
+
+<div class="text-below">
+
+<b>My name is Lami Chemeda</b><br>
+
+<i>I graduated from the Information Technology Department.</i><br>
+
+<em>I can work with various programming languages. I am currently a full-stack developer.</em>
+
+</div>
+
+</div>
+
+angelscript
+Copy
+<!-- Home Page -->
+<div class="content-area" id="home">
+    <h2>Welcome to My Home Page</h2>
+    <p>This site showcases my projects, skills, and professional background. Feel free to explore!</p>
+    <h3>Featured Projects</h3>
+    <div class="image-right">
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2024-12-07 105440.png"alt="Project 1">
+            <div class="project-description">Employee Information System</div>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2025-02-13 004359.png"alt="Project 1">
+            <div class="project-description">currency convertor app by reactnative and node js</div>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2025-02-12 112228.png"alt="Project 2">
+            <div class="project-description">calculator app</div>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2025-02-12 113607.png"alt="Project 3">
+            <div class="project-description">login page by ASP.NET</div>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2025-02-12 110603.png" alt="Project 4">
+            <div class="project-description">calculator app by html,css and javascript</div>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+    </div>
+</div>
+
+<!-- About Page -->
+<div class="content-area" id="about">
+    <h2>About Me</h2>
+    <p><b>Name:</b> Lami Chemeda</p>
+    <p><b>Department:</b> Information Technology</p>
+    <p><b>CGPA:</b> 3.80.</p>
+    <p><b>Address:</b> Oromia Bishoftu</p>
+    <p><b>Age:</b> 24</p>
+    <p><b>Sex:</b> Male</p>
+    
+    <h3>My Skills</h3>
+    <div class="skills">
+        <div class="skill">
+            <div class="skill-name">
+                <span>React Native with node js</span>
+                <span>95%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 95%;">95%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">
+                <span>JavaScript</span>
+                <span>100%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 100%;">100%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">
+                <span>ASP.NET and ADO.NET</span>
+                <span>100%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 100%;">100%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">
+                <span>web(php)</span>
+                <span>100%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 100%;">100%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">
+                <span>react</span>
+                <span>100%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 100%;">100%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">
+                <span>Java</span>
+                <span>100%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 100%;">100%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">
+                <span>android developement for mobile appilication</span>
+                <span>100%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 100%;">100%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">
+                <span>HTML and CSS</span>
+                <span>100%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 100%;">100%</div>
+            </div>
+        </div>
+    </div>
+    <em>I also have a certificate in programming courses from abroad.</em>
+</div>
+
+<!-- Portfolio Page -->
+<div class="content-area" id="portfolio">
+    <h2>My Projects</h2>
+    <p><i>i do several project by using several programming language<br>
+        some of them are shown as below.</i></p>
+    <div class="image-right">
+        
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2024-12-07 115000.png" alt="Project 2">
+            <div class="project-description">Login page created using Java.</div>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2025-02-12 110603.png" alt="Project 2">
+            <div class="project-description">Calculator app by HTML and CSS</div>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2025-02-12 113607.png" alt="Project 2">
+            <div class="project-description">Login page created using ASP.NET.</div>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2025-02-12 112228.png" alt="Project 3">
+            <div class="project-description">Calculator app by React Native and API integration.</div>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2025-02-13 004359.png" alt="Project 4">
+            <div class="project-description">currency convertor app developed by reactnative with node js.</div>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2024-12-07 105440.png" alt="Project 5">
+            <div class="project-description">Employee information system by java.</div>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2024-12-25 045730.png" alt="Project 6">
+            <div class="project-description">Employee information system by java.</div>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+    </div>
+</div>
+
+<!-- Resume Page -->
+<div class="content-area" id="resume">
+    <h2>Resume</h2>
+    <p><b>Name:</b> Lami Chemeda</p>
+    <p><b>Department:</b> Information Technology</p>
+    <p><b>Experience:</b></p>
+    <ul>
+        <li>Full-Stack Developer in university (2023 - Present)</li>
+        <li>Intern at inno Tech (2022 - 2023)</li>
+    </ul>
+    <p><b>Education:</b></p>
+    <ul>
+        <li>Bachelor's Degree in Information Technology - University of MAU (2020 - 2023)</li>
+    </ul>
+    <p><b>Skills:</b></p>
+    <ul>
+        <li>Java, JavaScript, React, React Native</li>
+        <li>HTML, CSS, PHP, ASP.NET</li>
+    </ul>
+    <p><b>Certifications:</b></p>
+    <ul>
+        <li> Fundamental Programming Certificate from Udacity</li>
+        <li>Data anaysis Certificate from Udacity </li>
+        <li>Android developement Certificate from  Udacity</li>
+    </ul>
+    <div class="image-right">
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2025-02-12 085712.png"alt="my andriod certificate">
+            <div class="project-description">i take from udacity.</div>
+            <a href="#" class="project-link">View my certificate</a>
+        </div>
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2025-02-12 085754.png" alt=" my pogramming certificate">
+            <div class="project-description">i take from udacity.</div>
+            <a href="#" class="project-link">View my certificate</a>
+        </div>
+        <div class="project">
+            <img src="C:\Users\A\Desktop\lamicho\my image\Screenshot 2025-02-12 085734.png"alt="my  data analysis certificate">
+            <div class="project-description">i take from udacity.</div>
+            <a href="#" class="project-link">View my certificate</a>
+        </div>
+        
+    </div>  
+</div>
+
+<!-- Contact Page -->
+<div class="content-area" id="contact">
+    <h2>Contact Me</h2>
+    <p>You can contact me through the following:</p>
+    <p><b>Phone:</b> 0920939012 / 0983664549</p>
+    <p><b>Email:</b> lami28807@gmail.com</p>
+    <p><b>Telegram:</b> @akkakeefanjiraadhedhuga</p>
+
+    <h3>Send Me a Message</h3>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+</div>
+
+<footer>
+
+<p>&copy; 2025 Lami Chemeda. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function showSection(sectionId) {
+
+const sections = document.querySelectorAll('.content-area');
+
+sections.forEach(section => {
+
+section.classList.remove('active');
+
+});
+
+document.getElementById(sectionId).classList.add('active');
+
+}
+
+window.onload = function() {
+
+showSection('home');
+
+};
+
+</script>
+
+</body>
+
+</html>
