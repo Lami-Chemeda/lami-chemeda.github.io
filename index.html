@@ -1,616 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Personal Website</title>
-<style>
-body {
-font-family: 'Arial', sans-serif;
-margin: 0;
-padding: 0;
-background-color: #e8f5e9;
-color: #333;
-}
-header {
-background: #def108;
-color: #083ed4;
-padding: 20px;
-text-align: center;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-nav {
-
-margin: 20px 0;
-
-}
-
-nav a {
-
-margin: 0 15px;
-
-color: #101010;
-
-text-decoration: none;
-
-padding: 10px 15px;
-
-background-color: #e69dc6;
-
-border-radius: 5px;
-
-transition: background-color 0.3s, color 0.3s;
-
-}
-
-nav a:hover {
-
-background-color: #098cf1;
-
-color: white;
-
-}
-
-.container {
-
-display: flex;
-
-padding: 20px;
-
-max-width: 1200px;
-
-margin: auto;
-
-flex-wrap: wrap;
-
-justify-content: center;
-
-}
-
-.image-left {
-
-flex: 1;
-
-text-align: center;
-
-padding-right: 20px;
-
-transition: transform 0.3s;
-
-}
-
-.image-left img {
-
-width: 250px;
-
-height: 250px;
-
-border-radius: 50%;
-
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-
-}
-
-.text-below {
-
-margin-top: 10px;
-
-text-align: left;
-
-}
-
-.content-area {
-
-flex: 2;
-
-display: none;
-
-background-color: #ff9800;
-
-padding: 20px;
-
-border-radius: 8px;
-
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-transition: opacity 0.3s ease;
-
-}
-
-.content-area.active {
-
-display: block;
-
-opacity: 1;
-
-}
-
-.image-right {
-
-display: grid;
-
-grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-
-gap: 10px;
-
-margin-top: 20px;
-
-}
-
-.image-right img {
-
-width: 100%;
-
-height: auto;
-
-border-radius: 5px;
-
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-
-}
-
-footer {
-
-margin-top: 20px;
-
-padding: 10px;
-
-text-align: center;
-
-background: #def108;
-
-}
-
-.project {
-
-margin-bottom: 20px;
-
-}
-
-.project-description {
-
-margin-top: 5px;
-
-text-align: center;
-
-font-size: 0.9em;
-
-color: #555;
-
-}
-
-.project-link {
-
-display: block;
-
-margin-top: 5px;
-
-color: #098cf1;
-
-text-decoration: none;
-
-}
-
-.project-link:hover {
-
-text-decoration: underline;
-
-}
-
-.skills {
-
-margin-top: 20px;
-
-}
-
-.skill {
-
-margin-bottom: 10px;
-
-}
-
-.skill-name {
-
-display: flex;
-
-justify-content: space-between;
-
-font-weight: bold;
-
-}
-
-.progress {
-
-background-color: #ddd;
-
-border-radius: 5px;
-
-overflow: hidden;
-
-height: 20px;
-
-}
-
-.progress-bar {
-
-height: 100%;
-
-background-color: #4caf50;
-
-text-align: center;
-
-color: white;
-
-line-height: 20px;
-
-}
-
-.contact-form {
-
-display: flex;
-
-flex-direction: column;
-
-margin-top: 20px;
-
-}
-
-.contact-form input,
-
-.contact-form textarea {
-
-margin-bottom: 10px;
-
-padding: 10px;
-
-border: 1px solid #ccc;
-
-border-radius: 5px;
-
-}
-
-.contact-form button {
-
-padding: 10px;
-
-background-color: #098cf1;
-
-color: white;
-
-border: none;
-
-border-radius: 5px;
-
-cursor: pointer;
-
-transition: background-color 0.3s;
-
-}
-
-.contact-form button:hover {
-
-background-color: #0a6dbd;
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LAMI CHMEDA | Full‑Stack Developer Portfolio</title>
+  <!-- Google Fonts + modern fallback -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: radial-gradient(ellipse at 20% 30%, #0B0F1F, #03050C);
+      color: #EDF2FF;
+      scroll-behavior: smooth;
+      line-height: 1.5;
+    }
+
+    /* custom scroll */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #111827;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3B82F6;
+      border-radius: 10px;
+      box-shadow: inset 0 0 4px #60A5FA;
+    }
+
+    /* sticky header with glassmorphism + glow */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(8, 12, 24, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(59, 130, 246, 0.5);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo h1 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #A5F3FC, #818CF8, #C084FC);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.3px;
+      text-shadow: 0 0 6px rgba(129, 140, 248, 0.3);
+    }
+
+    /* navigation: horizontal on PC */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .nav-link {
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(4px);
+      padding: 0.6rem 1.4rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #CBD5F0;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      letter-spacing: 0.2px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    .nav-link:hover {
+      background: #3B82F6;
+      color: white;
+      border-color: #93C5FD;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(59,130,246,0.4);
+    }
+    .nav-link.active-nav {
+      background: linear-gradient(95deg, #2563EB, #7C3AED);
+      color: white;
+      border-color: #C084FC;
+      box-shadow: 0 0 12px #7C3AED80;
+    }
+
+    /* main layout */
+    .main-grid {
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      display: flex;
+      gap: 2rem;
+    }
+
+    /* left profile card (glassy + vibrant) */
+    .profile-card {
+      flex: 1.2;
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(12px);
+      border-radius: 2rem;
+      padding: 1.8rem;
+      text-align: center;
+      border: 1px solid rgba(96, 165, 250, 0.4);
+      box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      transition: all 0.2s;
+    }
+    .profile-card img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #60A5FA;
+      box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.3), 0 20px 25px -8px black;
+    }
+    .profile-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 1rem;
+      background: linear-gradient(120deg, #FDE047, #FACC15);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .profile-bio {
+      margin-top: 0.5rem;
+      color: #A5B4FC;
+      font-size: 0.9rem;
+    }
+    .profile-tag {
+      margin-top: 1rem;
+      background: rgba(59,130,246,0.2);
+      border-radius: 40px;
+      padding: 0.4rem;
+      font-size: 0.8rem;
+      color: #93C5FD;
+    }
+
+    /* right stacked sections */
+    .sections-stack {
+      flex: 2.5;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .section-card {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 2rem;
+      padding: 1.8rem;
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      transition: all 0.25s;
+      scroll-margin-top: 90px;
+      box-shadow: 0 12px 28px -8px rgba(0,0,0,0.4);
+    }
+    .section-card:hover {
+      border-color: #60A5FA;
+      box-shadow: 0 18px 30px -12px #3B82F630;
+    }
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(135deg, #E0F2FE, #A5F3FC, #C7D2FE);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      border-left: 4px solid #3B82F6;
+      padding-left: 1rem;
+    }
+
+    /* project grid - FIXED: images display fully without cropping */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+    .project-card {
+      background: #0F172A;
+      border-radius: 1.2rem;
+      padding: 0.8rem;
+      transition: all 0.25s;
+      border: 1px solid #1E293B;
+    }
+    .project-card:hover {
+      border-color: #3B82F6;
+      transform: translateY(-5px);
+      background: #111827;
+    }
+    .project-card img {
+      width: 100%;
+      height: auto;
+      min-height: 120px;
+      max-height: 140px;
+      object-fit: contain;   /* shows full image, no cropping */
+      border-radius: 1rem;
+      background: #0B1120;
+    }
+    .project-description {
+      font-size: 0.8rem;
+      margin-top: 8px;
+      color: #CBD5E1;
+    }
+    .project-link {
+      color: #60A5FA;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.75rem;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    /* skills progress */
+    .skill-item {
+      margin-bottom: 1rem;
+    }
+    .skill-name {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .progress-bg {
+      background: #1E293B;
+      border-radius: 30px;
+      height: 8px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      background: linear-gradient(90deg, #3B82F6, #A855F7);
+      height: 100%;
+      border-radius: 30px;
+      width: 0%;
+    }
+
+    /* contact form */
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      background: #0F172A;
+      border: 1px solid #334155;
+      border-radius: 1rem;
+      padding: 0.8rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-family: inherit;
+    }
+    .contact-form button {
+      background: linear-gradient(95deg, #2563EB, #7C3AED);
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 2rem;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .contact-form button:hover {
+      transform: scale(0.98);
+      box-shadow: 0 4px 12px #7C3AED80;
+    }
+    .social-links {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .social-links a {
+      background: #1E293B;
+      padding: 0.5rem 1rem;
+      border-radius: 40px;
+      text-decoration: none;
+      color: #94A3B8;
+      font-size: 0.8rem;
+      transition: 0.2s;
+      border: 1px solid #3B82F640;
+    }
+    .social-links a:hover {
+      background: #3B82F6;
+      color: white;
+      border-color: #60A5FA;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #030712cc;
+      border-top: 1px solid #1E293B;
+      color: #94A3B8;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    /* responsive: vertical nav on mobile */
+    @media (max-width: 768px) {
+      .main-grid {
+        flex-direction: column;
+        padding: 0 1rem;
+      }
+      .profile-card {
+        position: relative;
+        top: 0;
+        margin-bottom: 1rem;
+      }
+      .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+      }
+      .nav-link {
+        text-align: center;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .section-card {
+      animation: fadeUp 0.45s ease-out;
+    }
+    .highlight-text {
+      color: #FACC15;
+    }
+  </style>
 </head>
-
 <body>
 
 <header>
-
-<h1>Welcome To My Personal Website</h1>
-
-<nav>
-
-<a href="#" onclick="showSection('home')">Home</a>
-
-<a href="#" onclick="showSection('about')">About</a>
-
-<a href="#" onclick="showSection('contact')">Contact</a>
-
-<a href="#" onclick="showSection('portfolio')">Portfolio</a>
-
-<a href="#" onclick="showSection('resume')">Resume</a>
-
-</nav>
-
+  <div class="header-container">
+    <div class="logo">
+      <h1>⚡ LAMI CHMEDA • FULL‑STACK</h1>
+    </div>
+    <nav id="navbar">
+      <a href="#home" class="nav-link" data-section="home">🏠 HOME</a>
+      <a href="#about" class="nav-link" data-section="about">👨‍💻 ABOUT</a>
+      <a href="#portfolio" class="nav-link" data-section="portfolio">📁 PORTFOLIO</a>
+      <a href="#resume" class="nav-link" data-section="resume">📄 RESUME</a>
+      <a href="#contact" class="nav-link" data-section="contact">📬 CONTACT</a>
+    </nav>
+  </div>
 </header>
 
-<div class="container">
-<div class="image-left">
-<img src="images\photo_2025-02-12_09-39-37.jpg"alt="Your Image">
-
-<div class="text-below">
-
-<b>My name is Lami Chemeda</b><br>
-
-<i>I graduated from the Information Technology Department.</i><br>
-
-<em>I can work with various programming languages. I am currently a full-stack developer.</em>
-
-</div>
-
-</div>
-
-<!-- Home Page -->
-<div class="content-area" id="home">
-    <h2>Welcome to My Home Page</h2>
-    <p>This site showcases my projects, skills, and professional background. Feel free to explore!</p>
-    <h3>Featured Projects</h3>
-    <div class="image-right">
-        <div class="project">
-            <img src="images/Screenshot 2026-03-16 100022.png"alt="Project 1">
-            <div class="project-description">Ethiopian government online voting system</div>
-            <a href="#" class="project-link">View Project</a>
-        </div>
-        <div class="project">
-            <img src="images\Screenshot 2025-02-13 004359.png"alt="Project 1">
-            <div class="project-description">currency convertor app by reactnative and node js</div>
-            <a href="#" class="project-link">View Project</a>
-        </div>
-        <div class="project">
-            <img src="images\Screenshot 2025-02-12 112228.png"alt="Project 2">
-            <div class="project-description">calculator app</div>
-            <a href="#" class="project-link">View Project</a>
-        </div>
-        <div class="project">
-            <img src="images\Screenshot 2025-02-12 113607.png"alt="Project 3">
-            <div class="project-description">login page by ASP.NET</div>
-            <a href="#" class="project-link">View Project</a>
-        </div>
-        <div class="project">
-            <img src="images\Screenshot 2025-02-12 110603.png" alt="Project 4">
-            <div class="project-description">calculator app by html,css and javascript</div>
-            <a href="#" class="project-link">View Project</a>
-        </div>
+<div class="main-grid">
+  <!-- left profile card (developer vibe) -->
+  <aside class="profile-card">
+    <img src="images\graduate photo.jpg" alt="Lami Chemeda">
+    <div class="profile-name">Lami Chemeda</div>
+    <div class="profile-bio">IT Engineer • Full‑Stack Developer</div>
+    <div class="profile-tag">React Native | ASP.NET | Node.js | Cloud</div>
+    <div style="margin-top: 1rem; font-size: 0.8rem; color:#A5B4FC">
+      <span>📍 Oromia, Bishoftu</span> • <span>🎂 24</span>
     </div>
-</div>
+  </aside>
 
-<!-- About Page -->
-<div class="content-area" id="about">
-    <h2>About Me</h2>
-    <p><b>Name:</b> Lami Chemeda</p>
-    <p><b>Department:</b> Information Technology</p>
-    <p><b>CGPA:</b> 3.86.</p>
-    <p><b>ExitExam:</b>68//100</p>
-    <p><b>Address:</b> Oromia Bishoftu</p>
-    <p><b>Age:</b> 24</p>
-    <p><b>Sex:</b> Male</p>
-    
-    <h3>My Skills</h3>
-    <div class="skills">
-        <div class="skill">
-            <div class="skill-name">
-                <span>React Native with node js</span>
-                <span>95%</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" style="width: 95%;">95%</div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="skill-name">
-                <span>JavaScript</span>
-                <span>100%</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" style="width: 100%;">100%</div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="skill-name">
-                <span>ASP.NET and ADO.NET</span>
-                <span>100%</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" style="width: 100%;">100%</div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="skill-name">
-                <span>web(php)</span>
-                <span>100%</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" style="width: 100%;">100%</div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="skill-name">
-                <span>react</span>
-                <span>100%</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" style="width: 100%;">100%</div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="skill-name">
-                <span>Java</span>
-                <span>100%</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" style="width: 100%;">100%</div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="skill-name">
-                <span>android developement for mobile appilication</span>
-                <span>100%</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" style="width: 100%;">100%</div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="skill-name">
-                <span>HTML and CSS</span>
-                <span>100%</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" style="width: 100%;">100%</div>
-            </div>
-        </div>
-    </div>
-    <em>I also have a certificate in programming courses from abroad.</em>
-</div>
+  <!-- right side: sections stacked for scroll spy -->
+  <div class="sections-stack">
+    <!-- HOME SECTION -->
+    <section id="home" class="section-card" data-section="home">
+      <h2 class="section-title">✦ Digital Forge ✦</h2>
+      <p>Innovative full‑stack developer  and i develop some real project such as ethiopian government online voting system, online student registration system,
+        employee resume analyser, employe management system,cros platform calculator app, currency convertor app and many more
+      </p>
+      <h3 style="margin: 1.5rem 0 0.5rem 0; color:#C7D2FE;">🔥 Featured Builds</h3>
+      <div class="project-grid">
+        <div class="project-card"><img src="images/Screenshot 2026-03-16 100022.png" alt="EGOVS"><div class="project-description">Ethiopian e‑voting system</div><a href="#" class="project-link">Explore →</a></div>
+        <div class="project-card"><img src="images\Screenshot 2025-02-13 004359.png" alt="currency"><div class="project-description">Currency converter (RN + Node)</div><a href="#" class="project-link">Explore →</a></div>
+        <div class="project-card"><img src="images\Screenshot 2025-02-12 112228.png" alt="calculator"><div class="project-description">Cross‑platform calculator</div><a href="#" class="project-link">Explore →</a></div>
+        <div class="project-card"><img src="images\Screenshot 2025-02-12 113607.png" alt="ASP.NET"><div class="project-description">Secure login (ASP.NET)</div><a href="#" class="project-link">Explore →</a></div>
+        <div class="project-card"><img src="images\Screenshot 2025-02-12 110603.png" alt="vanilla"><div class="project-description">Vanilla JS calculator</div><a href="#" class="project-link">Explore →</a></div>
+      </div>
+    </section>
 
-<!-- Portfolio Page -->
-<div class="content-area" id="portfolio">
-    <h2>My Projects</h2>
-    <p><i>i do several project by using several programming language<br>
-        some of them are shown as below.</i></p>
-    <div class="image-right">
-        
-        <div class="project">
-            <img src="images\Screenshot 2026-03-16 101652.png" alt="Project 2">
-            <div class="project-description">Supervisor  page of EGOVS.</div>
-            <a href="#" class="project-link">View Project</a>
-        </div>
-        <div class="project">
-            <img src="images\Screenshot 2025-02-12 110603.png" alt="Project 2">
-            <div class="project-description">Calculator app by HTML and CSS</div>
-            <a href="#" class="project-link">View Project</a>
-        </div>
-        <div class="project">
-            <img src="images\Screenshot 2025-02-12 113607.png" alt="Project 2">
-            <div class="project-description">Login page created using ASP.NET.</div>
-            <a href="#" class="project-link">View Project</a>
-        </div>
-        <div class="project">
-            <img src="images\Screenshot 2025-02-12 112228.png" alt="Project 3">
-            <div class="project-description">Calculator app by React Native and API integration.</div>
-            <a href="#" class="project-link">View Project</a>
-        </div>
-        <div class="project">
-            <img src="images\Screenshot 2025-02-13 004359.png" alt="Project 4">
-            <div class="project-description">currency convertor app developed by reactnative with node js.</div>
-            <a href="#" class="project-link">View Project</a>
-        </div>
-        <div class="project">
-            <img src="images\Screenshot 2026-03-16 100833.png" alt="Project 5">
-            <div class="project-description">Admin page of EGOVS.</div>
-            <a href="#" class="project-link">View Project</a>
-        </div>
-        <div class="project">
-            <img src="images\Screenshot 2024-12-25 045730.png" alt="Project 6">
-            <div class="project-description">Employee information system by java.</div>
-            <a href="#" class="project-link">View Project</a>
-        </div>
-    </div>
-</div>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section-card" data-section="about">
+      <h2 class="section-title">📌 About the dev</h2>
+      <p><span class="highlight-text">Name:</span> Lami Chemeda &nbsp;|&nbsp; <span class="highlight-text">Dept:</span> Information Technology &nbsp;|&nbsp; <span class="highlight-text">CGPA:</span> 3.86 &nbsp;|&nbsp; <span class="highlight-text">ExitExam:</span> 68/100</p>
+      <p><span class="highlight-text">📍 Address:</span> Oromia Bishoftu &nbsp;|&nbsp; <span class="highlight-text">🎂 Age:</span> 24 &nbsp;|&nbsp; <span class="highlight-text">♂️ Sex:</span> Male</p>
+      <h3 style="margin: 1.5rem 0 0.8rem 0; color:#C7D2FE;">⚙️ Technical Arsenal</h3>
+      <div class="skills">
+        <div class="skill-item"><div class="skill-name"><span>React Native + Node.js</span><span>95%</span></div><div class="progress-bg"><div class="progress-fill" style="width:95%"></div></div></div>
+         <div class="skill-item"><div class="skill-name"><span>django</span><span>95%</span></div><div class="progress-bg"><div class="progress-fill" style="width:95%"></div></div></div>
+          <div class="skill-item"><div class="skill-name"><span>c#</span><span>95%</span></div><div class="progress-bg"><div class="progress-fill" style="width:95%"></div></div></div>
+           <div class="skill-item"><div class="skill-name"><span>mysql and mongo db</span><span>95%</span></div><div class="progress-bg"><div class="progress-fill" style="width:95%"></div></div></div>
+            <div class="skill-item"><div class="skill-name"><span>phyton</span><span>95%</span></div><div class="progress-bg"><div class="progress-fill" style="width:95%"></div></div></div>
+             <div class="skill-item"><div class="skill-name"><span>c++</span><span>95%</span></div><div class="progress-bg"><div class="progress-fill" style="width:95%"></div></div></div>
+              <div class="skill-item"><div class="skill-name"><span>Express.js</span><span>95%</span></div><div class="progress-bg"><div class="progress-fill" style="width:95%"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>JavaScript (ES6+)</span><span>100%</span></div><div class="progress-bg"><div class="progress-fill" style="width:100%"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>ASP.NET / ADO.NET</span><span>100%</span></div><div class="progress-bg"><div class="progress-fill" style="width:100%"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>PHP (Web)</span><span>100%</span></div><div class="progress-bg"><div class="progress-fill" style="width:100%"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>React.js</span><span>100%</span></div><div class="progress-bg"><div class="progress-fill" style="width:100%"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>Java / Android</span><span>100%</span></div><div class="progress-bg"><div class="progress-fill" style="width:100%"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>HTML5/CSS3/Tailwind</span><span>100%</span></div><div class="progress-bg"><div class="progress-fill" style="width:100%"></div></div></div>
+      </div>
+      <em>🏅 International certifications: Udacity (Programming, Data Analysis, Android Dev)</em>
+    </section>
 
-<!-- Resume Page -->
-<div class="content-area" id="resume">
-    <h2>Resume</h2>
-    <p><b>Name:</b> Lami Chemeda</p>
-    <p><b>Department:</b> Information Technology</p>
-    <p><b>Experience:</b></p>
-    <ul>
-        <li>Full-Stack Developer in university (2023 - Present)</li>
-        <li>Intern at inno Tech (2022 - 2023)</li>
-    </ul>
-    <p><b>Education:</b></p>
-    <ul>
-        <li>Bachelor's Degree in Information Technology - University of MAU (2020 - 2023)</li>
-    </ul>
-    <p><b>Skills:</b></p>
-    <ul>
-        <li>Java, JavaScript, React, React Native</li>
-        <li>HTML, CSS, PHP, ASP.NET</li>
-    </ul>
-    <p><b>Certifications:</b></p>
-    <ul>
-        <li> Fundamental Programming Certificate from Udacity</li>
-        <li>Data anaysis Certificate from Udacity </li>
-        <li>Android developement Certificate from  Udacity</li>
-    </ul>
-    <div class="image-right">
-        <div class="project">
-            <img src="images\Screenshot 2025-02-12 085712.png"alt="my andriod certificate">
-            <div class="project-description">i take from udacity.</div>
-            <a href="#" class="project-link">View my certificate</a>
-        </div>
-        <div class="project">
-            <img src="images\Screenshot 2025-02-12 085754.png" alt=" my pogramming certificate">
-            <div class="project-description">i take from udacity.</div>
-            <a href="#" class="project-link">View my certificate</a>
-        </div>
-        <div class="project">
-            <img src="images/Screenshot 2025-02-12 085734.png"alt="my  data analysis certificate">
-            <div class="project-description">i take from udacity.</div>
-            <a href="#" class="project-link">View my certificate</a>
-        </div>
-        
-    </div>  
-</div>
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="section-card" data-section="portfolio">
+      <h2 class="section-title">📂 Live Projects & Experiments</h2>
+      <p><i>Real-world solutions — from government platforms to fintech tools.</i></p>
+      <div class="project-grid">
+        <div class="project-card"><img src="images\Screenshot 2026-03-16 101652.png" alt="supervisor"><div class="project-description">EGOVS Supervisor Panel</div><a href="#" class="project-link">Preview</a></div>
+        <div class="project-card"><img src="images\Screenshot 2025-02-12 110603.png" alt="calc"><div class="project-description">HTML/CSS Calculator</div><a href="#" class="project-link">Preview</a></div>
+        <div class="project-card"><img src="images\Screenshot 2025-02-12 113607.png" alt="aspnet"><div class="project-description">ASP.NET login system</div><a href="#" class="project-link">Preview</a></div>
+        <div class="project-card"><img src="images\Screenshot 2025-02-12 112228.png" alt="reactnative"><div class="project-description">RN Calculator + API</div><a href="#" class="project-link">Preview</a></div>
+        <div class="project-card"><img src="images\Screenshot 2025-02-13 004359.png" alt="currency"><div class="project-description">Currency converter (RN/Node)</div><a href="#" class="project-link">Preview</a></div>
+        <div class="project-card"><img src="images\Screenshot 2026-03-16 100833.png" alt="admin"><div class="project-description">EGOVS Admin Dashboard</div><a href="#" class="project-link">Preview</a></div>
+        <div class="project-card"><img src="images\Screenshot 2024-12-25 045730.png" alt="java"><div class="project-description">Employee system (Java)</div><a href="#" class="project-link">Preview</a></div>
+      </div>
+    </section>
 
-<!-- Contact Page -->
-<div class="content-area" id="contact">
-    <h2>Contact Me</h2>
-    <p>You can contact me through the following:</p>
-    <p><b>Phone:</b> 0920939012 / 0983664549</p>
-    <p><b>Email:</b> lami28807@gmail.com</p>
-    <p><b>Telegram:</b> @akkakeefanjiraadhedhuga</p>
+    <!-- RESUME SECTION -->
+    <section id="resume" class="section-card" data-section="resume">
+      <h2 class="section-title">📜 Résumé / Credentials</h2>
+      <p><span class="highlight-text">💼 Experience:</span> Full-Stack Developer @ University (2023-Present) • Intern @ Inno Tech (2022-2023)</p>
+      <p><span class="highlight-text">🎓 Education:</span> BSc in IT, MAU University (2020-2023)</p>
+      <p><span class="highlight-text">🧠 Core Stack:</span> Java, JavaScript, React Native, Node.js, ASP.NET, PHP, MySQL, Firebase</p>
+      <p><span class="highlight-text">📜 Certifications:</span> Programming Fundamentals (Udacity) • Data Analysis (Udacity) • Android Dev (Udacity)</p>
+      <div class="project-grid">
+        <div class="project-card"><img src="images\Screenshot 2025-02-12 085712.png" alt="android cert"><div class="project-description">Android Developer</div><a href="#" class="project-link">View cert</a></div>
+        <div class="project-card"><img src="images\Screenshot 2025-02-12 085754.png" alt="prog cert"><div class="project-description">Programming</div><a href="#" class="project-link">View cert</a></div>
+        <div class="project-card"><img src="images/Screenshot 2025-02-12 085734.png" alt="data cert"><div class="project-description">Data Analysis</div><a href="#" class="project-link">View cert</a></div>
+      </div>
+    </section>
 
-    <h3>Send Me a Message</h3>
-    <form class="contact-form" id="contactForm">
-        <!-- Added name attributes for EmailJS mapping -->
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-    <p id="successMessage" style="color: green; display: none;">Message sent successfully!</p>
-</div>
+    <!-- CONTACT SECTION (added GitHub) -->
+    <section id="contact" class="section-card" data-section="contact">
+      <h2 class="section-title">📡 Let’s connect</h2>
+      <p><span class="highlight-text">📞 Phone:</span> +251 920939012 / +251 983664549 &nbsp;|&nbsp; <span class="highlight-text">📧 Email:</span> lami28807@gmail.com</p>
+      <p><span class="highlight-text">💬 Telegram:</span> @akkakeefanjiraadhedhuga</p>
+      <div class="social-links">
+        <a href="https://github.com/lami-chemeda.github.io" target="_blank" rel="noopener noreferrer">🐙 GitHub / lamichemeda</a>
+        <a href="#" target="_blank">🔗 website github.com/Lami-Chemeda</a>
+      </div>
+      <h3 style="margin: 1rem 0 0.5rem 0;">✍️ Send direct message</h3>
+      <form class="contact-form" id="contactForm">
+        <input type="text" id="name" name="name" placeholder="Full name" required>
+        <input type="email" id="email" name="email" placeholder="Email address" required>
+        <textarea id="message" name="message" rows="4" placeholder="Project idea / collaboration" required></textarea>
+        <button type="submit">🚀 Send Message</button>
+      </form>
+      <p id="successMessage" style="color: #4ade80; display: none; margin-top: 1rem;">✓ Message delivered successfully!</p>
+    </section>
+  </div>
 </div>
 
 <footer>
-
-<p>&copy; 2025 Lami Chemeda. All Rights Reserved.</p>
-
+  <p>© 2025 Lami Chemeda — built with ⚡ modern full‑stack vision</p>
 </footer>
 
 <!-- EmailJS SDK -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
-    function showSection(sectionId) {
-        const sections = document.querySelectorAll('.content-area');
-        sections.forEach(section => {
-            section.classList.remove('active');
+  // Initialize EmailJS (public key preserved)
+  emailjs.init("HnSBdvqnFQ7uxii9G");
+
+  // Contact form handler (keeps full functionality)
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      emailjs.sendForm('service_2xgrqht', 'template_y9q2kqb', this)
+        .then(() => {
+          const successMsg = document.getElementById('successMessage');
+          successMsg.style.display = 'block';
+          contactForm.reset();
+          setTimeout(() => successMsg.style.display = 'none', 4000);
+        })
+        .catch((err) => {
+          console.error("Email error:", err);
+          alert("⚠️ Failed to send. Please try again later.");
         });
-        document.getElementById(sectionId).classList.add('active');
-    }
-    
-    window.onload = function() {
-        showSection('home');
-    };
-    
-    // Initialize EmailJS with your public key
-    emailjs.init("HnSBdvqnFQ7uxii9G");  // YOUR_PUBLIC_KEY
-
-    // Handle form submission
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        // Send the form using EmailJS
-        emailjs.sendForm('service_2xgrqht', 'template_y9q2kqb', this)
-            .then(function(response) {
-                // Show success message
-                document.getElementById('successMessage').style.display = 'block';
-                // Optionally clear the form fields
-                document.getElementById('contactForm').reset();
-            }, function(error) {
-                console.log('FAILED...', error);
-                // You can add an error message display here if desired
-                alert('Failed to send message. Please try again later.');
-            });
     });
+  }
+
+  // ----- SCROLL SPY (auto section activation without timer) -----
+  const sections = document.querySelectorAll('.section-card');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function updateActiveSectionOnScroll() {
+    let currentSectionId = '';
+    const scrollPosition = window.scrollY + 130; // offset for sticky header
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.offsetHeight;
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        currentSectionId = section.getAttribute('id');
+      }
+    });
+
+    if (currentSectionId) {
+      navLinks.forEach(link => {
+        link.classList.remove('active-nav');
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+          link.classList.add('active-nav');
+        }
+      });
+    }
+  }
+
+  // smooth scroll on nav click + active update
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        navLinks.forEach(l => l.classList.remove('active-nav'));
+        this.classList.add('active-nav');
+      }
+    });
+  });
+
+  window.addEventListener('scroll', updateActiveSectionOnScroll);
+  window.addEventListener('load', () => {
+    updateActiveSectionOnScroll();
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 </script>
 </body>
 </html>
-
