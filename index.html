@@ -357,6 +357,40 @@
     .highlight-text {
       color: #FACC15;
     }
+    
+    /* EMERALD UPWORK THEME OVERRIDES */
+    body.theme-emerald {
+      background: radial-gradient(ellipse at 20% 30%, #064e3b, #022c22);
+      color: #f0fdf4;
+    }
+    body.theme-emerald header { border-bottom: 1px solid rgba(16, 185, 129, 0.5); }
+    body.theme-emerald .nav-link:hover {
+      background: #10b981; border-color: #34d399; color: white;
+    }
+    body.theme-emerald .nav-link.active-nav {
+      background: linear-gradient(95deg, #059669, #10b981); border-color: #34d399;
+      box-shadow: 0 0 12px rgba(16,185,129,0.5);
+    }
+    body.theme-emerald .logo h1, body.theme-emerald .section-title {
+      background: linear-gradient(135deg, #a7f3d0, #34d399, #10b981);
+      background-clip: text; -webkit-background-clip: text; color: transparent;
+    }
+    body.theme-emerald .profile-name {
+      background: linear-gradient(120deg, #34d399, #a7f3d0);
+      background-clip: text; -webkit-background-clip: text; color: transparent;
+    }
+    body.theme-emerald .section-card:hover, body.theme-emerald .project-card:hover {
+      border-color: #10b981;
+    }
+    body.theme-emerald .progress-fill, body.theme-emerald .contact-form button {
+      background: linear-gradient(90deg, #059669, #10b981);
+    }
+    body.theme-emerald .project-link, body.theme-emerald .highlight-text {
+      color: #34d399;
+    }
+    body.theme-emerald ::-webkit-scrollbar-thumb {
+      background: #10b981;
+    }
   </style>
 </head>
 <body>
@@ -372,6 +406,7 @@
       <a href="#portfolio" class="nav-link" data-section="portfolio">📁 PORTFOLIO</a>
       <a href="#resume" class="nav-link" data-section="resume">📄 RESUME</a>
       <a href="#contact" class="nav-link" data-section="contact">📬 CONTACT</a>
+      <button id="themeToggle" class="nav-link" style="cursor:pointer; border:1px solid #34d399; background: rgba(16, 185, 129, 0.1);">🎨 THEME</button>
     </nav>
   </div>
 </header>
@@ -381,8 +416,11 @@
   <aside class="profile-card">
     <img src="images\graduate photo.jpg" alt="Lami Chemeda">
     <div class="profile-name">Lami Chemeda</div>
-    <div class="profile-bio">IT Engineer • Full‑Stack Developer</div>
-    <div class="profile-tag">React Native | ASP.NET | Node.js | Cloud</div>
+    <div class="profile-bio">Full-Stack Developer @ OTech</div>
+    <div class="profile-tag">React Native | ASP.NET | Node.js | Python</div>
+    <div style="margin-top: 1rem; background: rgba(16, 185, 129, 0.2); border: 1px solid #10b981; border-radius: 8px; padding: 0.5rem; color: #a7f3d0; font-weight: 600; font-size: 0.85rem;">
+      🟢 Available for Freelance Work (Upwork / Fiverr)
+    </div>
     <div style="margin-top: 1rem; font-size: 0.8rem; color:#A5B4FC">
       <span>📍 Oromia, Bishoftu</span> • <span>🎂 24</span>
     </div>
@@ -393,9 +431,18 @@
     <!-- HOME SECTION -->
     <section id="home" class="section-card" data-section="home">
       <h2 class="section-title">✦ Digital Forge ✦</h2>
-      <p>Innovative full‑stack developer  and i develop some real project such as ethiopian government online voting system, online student registration system,
-        employee resume analyser, employe management system,cros platform calculator app, currency convertor app and many more
-      </p>
+      <p>Innovative full‑stack developer delivering high-quality, scalable solutions for clients. I develop robust real-world projects such as the Ethiopian Government online voting system, student registration systems, employee resume analyzers, and cross-platform mobile apps.</p>
+      
+      <div style="margin: 1.5rem 0; padding: 1rem; background: rgba(30, 41, 59, 0.5); border-left: 4px solid #10b981; border-radius: 0 8px 8px 0;">
+        <h3 style="color:#C7D2FE; margin-bottom: 0.5rem;">💼 Freelance Services</h3>
+        <ul style="list-style-position: inside; color: #CBD5E1; font-size: 0.9rem;">
+          <li>Custom Web & Mobile App Development</li>
+          <li>Backend API Architecture & Integration</li>
+          <li>Database Design (MySQL, MongoDB)</li>
+          <li>Clean Code, Fast Delivery, Client Satisfaction</li>
+        </ul>
+      </div>
+
       <h3 style="margin: 1.5rem 0 0.5rem 0; color:#C7D2FE;">🔥 Featured Builds</h3>
       <div class="project-grid">
         <div class="project-card"><img src="images/Screenshot 2026-03-16 100022.png" alt="EGOVS"><div class="project-description">Ethiopian e‑voting system</div><a href="#" class="project-link">Explore →</a></div>
@@ -448,10 +495,28 @@
     <!-- RESUME SECTION -->
     <section id="resume" class="section-card" data-section="resume">
       <h2 class="section-title">📜 Résumé / Credentials</h2>
-      <p><span class="highlight-text">💼 Experience:</span> Full-Stack Developer @ University (2023-Present) • Intern @ Inno Tech (2022-2023)</p>
-      <p><span class="highlight-text">🎓 Education:</span> BSc in IT, MAU University (2020-2023)</p>
-      <p><span class="highlight-text">🧠 Core Stack:</span> Java, JavaScript, React Native, Node.js, ASP.NET, PHP, MySQL, Firebase</p>
-      <p><span class="highlight-text">📜 Certifications:</span> Programming Fundamentals (Udacity) • Data Analysis (Udacity) • Android Dev (Udacity)</p>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <p style="margin-bottom: 0.8rem;"><span class="highlight-text">💼 Professional Experience:</span></p>
+        <ul style="list-style-type: none; padding-left: 1rem; border-left: 2px solid #3B82F6; margin-left: 0.5rem;">
+          <li style="margin-bottom: 1.2rem; position: relative;">
+            <span style="position: absolute; left: -1.38rem; top: 0.3rem; width: 12px; height: 12px; background: #60A5FA; border-radius: 50%; box-shadow: 0 0 10px #60A5FA;"></span>
+            <strong style="font-size: 1.1rem; color: #EDF2FF;">Full-Stack Developer</strong> <span style="color: #93C5FD;">@ OTech Engineering and Solutions</span><br>
+            <span style="font-size: 0.85rem; color: #94A3B8; display: inline-block; margin-bottom: 0.3rem;">Since mid-2018 (E.C.) - Present</span><br>
+            <span style="font-size: 0.9rem; color: #CBD5E1;">Developing high-end full-stack applications, robust backend architectures, and real-world software solutions.</span>
+          </li>
+          <li style="position: relative;">
+            <span style="position: absolute; left: -1.38rem; top: 0.3rem; width: 12px; height: 12px; background: #60A5FA; border-radius: 50%; box-shadow: 0 0 10px #60A5FA;"></span>
+            <strong style="font-size: 1.1rem; color: #EDF2FF;">Project Development & Participation</strong> <span style="color: #93C5FD;">@ MAU University</span><br>
+            <span style="font-size: 0.85rem; color: #94A3B8; display: inline-block; margin-bottom: 0.3rem;">Since 2015 (E.C.)</span><br>
+            <span style="font-size: 0.9rem; color: #CBD5E1;">Active participant in university-level project development, coding bootcamps, and engineering initiatives.</span>
+          </li>
+        </ul>
+      </div>
+
+      <p><span class="highlight-text">🎓 Education:</span> BSc in Information Technology, MAU University</p>
+      <p><span class="highlight-text">🧠 Core Stack:</span> Java, JavaScript, React Native, Node.js, ASP.NET, PHP, Python, MySQL</p>
+      <p><span class="highlight-text">📜 Certifications:</span> Programming Fundamentals • Data Analysis • Android Dev (Udacity)</p>
       <div class="project-grid">
         <div class="project-card"><img src="images\Screenshot 2025-02-12 085712.png" alt="android cert"><div class="project-description">Android Developer</div><a href="#" class="project-link">View cert</a></div>
         <div class="project-card"><img src="images\Screenshot 2025-02-12 085754.png" alt="prog cert"><div class="project-description">Programming</div><a href="#" class="project-link">View cert</a></div>
@@ -477,11 +542,24 @@
       </form>
       <p id="successMessage" style="color: #4ade80; display: none; margin-top: 1rem;">✓ Message delivered successfully!</p>
     </section>
+
+    <!-- VISITOR ANALYTICS SECTION -->
+    <section id="analytics" class="section-card" data-section="analytics" style="text-align: center;">
+      <h2 class="section-title" style="border: none; padding: 0; display: inline-block;">🌍 Global Reach & Analytics</h2>
+      <p style="margin-bottom: 1.5rem; color: #CBD5E1; font-size: 0.9rem;">Live tracking of visitors checking out my portfolio from around the world.</p>
+      
+      <!-- Interactive 3D Globe Visitor Tracker -->
+      <div style="display: flex; justify-content: center; overflow: hidden; border-radius: 1rem; padding: 1rem; background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(59, 130, 246, 0.2);">
+        <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5m9q8z7x1v2&amp;m=0&amp;c=3b82f6&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"></script>
+      </div>
+      
+      <p style="margin-top: 1rem; font-size: 0.8rem; color: #94A3B8;">Detailed backend analytics (devices, sessions, etc.) are monitored securely via Google Analytics.</p>
+    </section>
   </div>
 </div>
 
 <footer>
-  <p>© 2025 Lami Chemeda — built with ⚡ modern full‑stack vision</p>
+  <p>© 2025 Lami Chemeda — Full-Stack Developer @ OTech Engineering and Solutions</p>
 </footer>
 
 <!-- EmailJS SDK -->
@@ -556,7 +634,25 @@
       const target = document.querySelector(window.location.hash);
       if (target) target.scrollIntoView({ behavior: 'smooth' });
     }
+    
+    // Load saved theme
+    if (localStorage.getItem('portfolioTheme') === 'emerald') {
+      document.body.classList.add('theme-emerald');
+    }
   });
+
+  // Theme Toggle Logic
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('theme-emerald');
+      if (document.body.classList.contains('theme-emerald')) {
+        localStorage.setItem('portfolioTheme', 'emerald');
+      } else {
+        localStorage.setItem('portfolioTheme', 'midnight');
+      }
+    });
+  }
 </script>
 </body>
 </html>
