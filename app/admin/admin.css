@@ -1,0 +1,99 @@
+.admin-container {
+  min-height: 100vh;
+  background: #030712;
+  color: #EDF2FF;
+  padding: 2rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.admin-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #1E293B;
+  padding-bottom: 1rem;
+}
+
+.admin-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #60A5FA, #C084FC);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.admin-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.admin-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #93C5FD;
+}
+
+.table-wrapper {
+  background: #0F172A;
+  border-radius: 12px;
+  border: 1px solid #1E293B;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #1E293B;
+}
+
+th {
+  background: #1E293B;
+  color: #94A3B8;
+  font-weight: 600;
+}
+
+tr:hover {
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.messages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.message-card {
+  background: #0F172A;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.message-header {
+  font-size: 0.9rem;
+  color: #94A3B8;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #1E293B;
+  padding-bottom: 0.5rem;
+}
+
+.message-header strong {
+  color: #EDF2FF;
+}
+
+.message-header .time {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748B;
+  margin-top: 0.3rem;
+}
+
+.message-body {
+  color: #CBD5E1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
