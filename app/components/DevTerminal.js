@@ -26,7 +26,7 @@ export default function DevTerminal() {
         response = 'Available commands: [skills] [experience] [hire] [contact] [clear]';
         break;
       case 'skills':
-        response = '⚡ Core Arsenal: React Native (95%), ASP.NET (100%), Node.js (95%), Python (95%), Java/Android (100%), MySQL/MongoDB (95%).';
+        response = '⚡ Core Skills: React Native (95%), ASP.NET (100%), Node.js (95%), Python (95%), Java/Android (100%), MySQL/MongoDB (95%).';
         break;
       case 'experience':
         response = '💼 5+ Years Full-Stack Developer @ OTech Engineering and Solutions. Key projects: Ethiopian e-Voting Platform, Currency Converters, Enterprise Systems.';

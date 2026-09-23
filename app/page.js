@@ -322,7 +322,7 @@ export default function Home() {
                 <div className="info-value">24, Male</div>
               </div>
             </div>
-            <h3 style={{ margin: '1.5rem 0 0.8rem 0', color: '#C7D2FE' }}>⚙️ Technical Arsenal</h3>
+            <h3 style={{ margin: '1.5rem 0 0.8rem 0', color: '#C7D2FE' }}>⚙️ Technical skill</h3>
             <div className="skills">
               <div className="skill-item"><div className="skill-name"><span>React Native + Node.js</span><span>95%</span></div><div className="progress-bg"><div className="progress-fill" style={{ width: '95%' }}></div></div></div>
               <div className="skill-item"><div className="skill-name"><span>django</span><span>95%</span></div><div className="progress-bg"><div className="progress-fill" style={{ width: '95%' }}></div></div></div>
