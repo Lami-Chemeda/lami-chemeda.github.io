@@ -74,13 +74,36 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         {/* Bottom CTA */}
-        <div style={{ marginTop: '2rem', paddingTop: '1rem', borderTop: '1px solid #1E293B', display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
+        <div style={{ marginTop: '2rem', paddingTop: '1rem', borderTop: '1px solid #1E293B', display: 'flex', justifyContent: 'flex-end', gap: '1rem', flexWrap: 'wrap' }}>
+          
+          <button onClick={() => {
+            if (project.demoUrl) window.open(project.demoUrl, '_blank');
+            else alert("🚀 The live demo is currently offline or being updated. Please check back later!");
+          }} style={{
+            background: 'linear-gradient(95deg, #10B981, #059669)', color: '#fff', border: 'none',
+            padding: '0.7rem 1.5rem', borderRadius: '2rem', fontWeight: '600', cursor: 'pointer',
+            transition: '0.2s', boxShadow: '0 4px 12px rgba(16, 185, 129, 0.3)'
+          }}>
+            🚀 Launch Live Demo
+          </button>
+          
+          <button onClick={() => {
+            if (project.githubUrl) window.open(project.githubUrl, '_blank');
+            else alert("🐙 Source code is currently private or not linked.");
+          }} style={{
+            background: '#1E293B', color: '#fff', border: '1px solid #334155',
+            padding: '0.7rem 1.5rem', borderRadius: '2rem', fontWeight: '600', cursor: 'pointer',
+            transition: '0.2s'
+          }}>
+            🐙 View Code
+          </button>
+
           <button onClick={onClose} style={{
             background: 'linear-gradient(95deg, #2563EB, #7C3AED)', color: '#fff', border: 'none',
             padding: '0.7rem 1.5rem', borderRadius: '2rem', fontWeight: '600', cursor: 'pointer',
             transition: '0.2s', boxShadow: '0 4px 12px rgba(124, 58, 237, 0.3)'
           }}>
-            Got it, looks great! 👍
+            Close
           </button>
         </div>
 

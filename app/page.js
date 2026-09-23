@@ -240,13 +240,13 @@ export default function Home() {
         <aside className="profile-card">
           <img src="/images/graduate photo.jpg" alt="Lami Chemeda" />
           <div className="profile-name">Lami Chemeda</div>
-          <div className="profile-bio">Full-Stack Developer @ OTech</div>
-          <div className="profile-tag">React Native | ASP.NET | Node.js | Python</div>
+          <div className="profile-bio attractive-role" style={{fontSize: '1.1rem'}}>Full-Stack & ERP Developer <i style={{color: '#93C5FD'}}>@ OTech</i></div>
+          <div className="profile-tag"><i>React Native | ASP.NET | Node.js | Python | ERP Systems</i></div>
           <div style={{ marginTop: '1rem', background: 'rgba(16, 185, 129, 0.2)', border: '1px solid #10b981', borderRadius: '8px', padding: '0.6rem', color: '#a7f3d0', fontWeight: '600', fontSize: '0.85rem', boxShadow: '0 4px 12px rgba(16, 185, 129, 0.2)' }}>
             🟢 Top-Tier Freelance Engineer<br />(Upwork / Fiverr Verified)
           </div>
-          <div style={{ marginTop: '1rem', fontSize: '0.8rem', color: '#A5B4FC' }}>
-            <span>📍 Oromia, Bishoftu</span> • <span>🎂 24</span>
+          <div style={{ marginTop: '1rem', fontSize: '0.85rem', color: '#A5B4FC' }}>
+            <i><span>📍 Ethiopia, Addis Ababa</span> • <span>🎂 24</span></i>
           </div>
         </aside>
 
@@ -255,18 +255,18 @@ export default function Home() {
           {/* HOME SECTION */}
           <section id="home" className="section-card" data-section="home">
             <h2 className="section-title">✦ Digital Forge ✦</h2>
-            <p>Innovative full‑stack developer delivering high-quality, scalable solutions for clients. I develop robust real-world projects such as the Ethiopian Government online voting system, student registration systems, employee resume analyzers, and cross-platform mobile apps.</p>
+            <p className="premium-text">Innovative full‑stack developer delivering <i>high-quality, scalable solutions</i> for clients. I develop robust real-world projects such as the <i>Ethiopian Government online voting system</i>, student registration systems, employee resume analyzers, and cross-platform mobile apps.</p>
             
             {/* NEW INTERACTIVE TERMINAL FEATURE */}
             <DevTerminal />
 
-            <div style={{ margin: '1.5rem 0', padding: '1.2rem', background: 'rgba(30, 41, 59, 0.5)', borderLeft: '4px solid #10b981', borderRadius: '0 8px 8px 0', boxShadow: '0 8px 16px rgba(0,0,0,0.3)' }}>
-              <h3 style={{ color: '#C7D2FE', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>💼 Professional Freelance Services</h3>
-              <ul style={{ listStylePosition: 'inside', color: '#CBD5E1', fontSize: '0.9rem', lineHeight: '1.7' }}>
-                <li><strong>Custom Mobile Apps:</strong> iOS & Android development using React Native & Node API.</li>
-                <li><strong>Enterprise Web Platforms:</strong> ASP.NET Core, C#, Java EE, and scalable React portals.</li>
-                <li><strong>Backend & Database Architecture:</strong> High-concurrency MySQL, MongoDB, & REST APIs.</li>
-                <li><strong>Clean Code Guarantee:</strong> 100% On-time Delivery, Bug-free deployment & client satisfaction.</li>
+            <div style={{ margin: '1.5rem 0', padding: '1.5rem', background: 'rgba(30, 41, 59, 0.5)', borderLeft: '4px solid #10b981', borderRadius: '0 12px 12px 0', boxShadow: '0 8px 16px rgba(0,0,0,0.3)' }}>
+              <h3 style={{ color: '#C7D2FE', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1.4rem' }}>💼 Professional Freelance Services</h3>
+              <ul style={{ listStyleType: 'none', paddingLeft: 0, color: '#CBD5E1', fontSize: '0.95rem', lineHeight: '1.8' }}>
+                <li style={{ marginBottom: '0.8rem', display: 'flex', gap: '0.8rem', alignItems: 'flex-start' }}><span style={{fontSize:'1.2rem'}}>📱</span> <div><strong className="attractive-role">Custom Mobile Apps:</strong> iOS & Android development using React Native & Node API.</div></li>
+                <li style={{ marginBottom: '0.8rem', display: 'flex', gap: '0.8rem', alignItems: 'flex-start' }}><span style={{fontSize:'1.2rem'}}>🌐</span> <div><strong className="attractive-role">Enterprise Web Platforms:</strong> ASP.NET Core, C#, Java EE, and scalable React portals.</div></li>
+                <li style={{ marginBottom: '0.8rem', display: 'flex', gap: '0.8rem', alignItems: 'flex-start' }}><span style={{fontSize:'1.2rem'}}>⚙️</span> <div><strong className="attractive-role">Backend & Database Architecture:</strong> High-concurrency MySQL, MongoDB, & REST APIs.</div></li>
+                <li style={{ display: 'flex', gap: '0.8rem', alignItems: 'flex-start' }}><span style={{fontSize:'1.2rem'}}>✨</span> <div><strong className="attractive-role">Clean Code Guarantee:</strong> 100% On-time Delivery, Bug-free deployment & client satisfaction.</div></li>
               </ul>
             </div>
 
@@ -278,8 +278,12 @@ export default function Home() {
               {ALL_PROJECTS.slice(0, 5).map((p) => (
                 <div key={p.id} className="project-card" onClick={() => setSelectedProject(p)} style={{ cursor: 'pointer' }}>
                   <img src={p.img} alt={p.title} />
-                  <div className="project-description"><strong>{p.title}</strong></div>
-                  <span className="project-link">📖 Read Case Study →</span>
+                  <div className="project-description"><strong style={{fontSize: '1.05rem', color: '#EDF2FF'}}>{p.title}</strong></div>
+                  <div className="project-description-text">{p.problem.substring(0, 90)}...</div>
+                  <div className="tech-stack-row">
+                    {p.tech.slice(0, 3).map(t => <span key={t} className="tech-badge">{t}</span>)}
+                  </div>
+                  <span className="project-link" style={{marginTop: 'auto'}}>📖 Read Case Study →</span>
                 </div>
               ))}
             </div>
@@ -288,8 +292,36 @@ export default function Home() {
           {/* ABOUT SECTION */}
           <section id="about" className="section-card" data-section="about">
             <h2 className="section-title">📌 About the dev</h2>
-            <p><span className="highlight-text">Name:</span> Lami Chemeda &nbsp;|&nbsp; <span className="highlight-text">Dept:</span> Information Technology &nbsp;|&nbsp; <span className="highlight-text">CGPA:</span> 3.86 &nbsp;|&nbsp; <span className="highlight-text">ExitExam:</span> 68/100</p>
-            <p><span className="highlight-text">📍 Address:</span> Oromia Bishoftu &nbsp;|&nbsp; <span className="highlight-text">🎂 Age:</span> 24 &nbsp;|&nbsp; <span className="highlight-text">♂️ Sex:</span> Male</p>
+            <div className="info-grid">
+              <div className="info-card">
+                <div className="info-label">Name</div>
+                <div className="info-value">Lami Chemeda</div>
+              </div>
+              <div className="info-card">
+                <div className="info-label">Department</div>
+                <div className="info-value">Information Technology</div>
+              </div>
+              <div className="info-card">
+                <div className="info-label">CGPA</div>
+                <div className="info-value" style={{color: '#34d399'}}>3.86</div>
+              </div>
+              <div className="info-card">
+                <div className="info-label">Exit Exam</div>
+                <div className="info-value">68/100</div>
+              </div>
+              <div className="info-card">
+                <div className="info-label">Location</div>
+                <div className="info-value">Ethiopia, Addis Ababa</div>
+              </div>
+              <div className="info-card">
+                <div className="info-label">Current Role</div>
+                <div className="info-value" style={{color: '#93C5FD'}}>Full-Stack & ERP Dev @ OTech</div>
+              </div>
+              <div className="info-card">
+                <div className="info-label">Age & Sex</div>
+                <div className="info-value">24, Male</div>
+              </div>
+            </div>
             <h3 style={{ margin: '1.5rem 0 0.8rem 0', color: '#C7D2FE' }}>⚙️ Technical Arsenal</h3>
             <div className="skills">
               <div className="skill-item"><div className="skill-name"><span>React Native + Node.js</span><span>95%</span></div><div className="progress-bg"><div className="progress-fill" style={{ width: '95%' }}></div></div></div>
@@ -312,7 +344,7 @@ export default function Home() {
           {/* PORTFOLIO SECTION WITH SMART CATEGORY FILTERS */}
           <section id="portfolio" className="section-card" data-section="portfolio">
             <h2 className="section-title">📂 Live Projects & Case Studies</h2>
-            <p style={{ marginBottom: '1rem' }}><i>Real-world solutions — from government voting platforms to fintech mobile tools.</i></p>
+            <p className="premium-text" style={{ marginBottom: '1rem' }}><i>Real-world solutions — from government voting platforms to fintech mobile tools.</i></p>
             
             {/* Filter Tabs */}
             <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
@@ -337,9 +369,13 @@ export default function Home() {
               {filteredProjects.map((p) => (
                 <div key={p.id} className="project-card" onClick={() => setSelectedProject(p)} style={{ cursor: 'pointer' }}>
                   <img src={p.img} alt={p.title} />
-                  <div className="project-description"><strong>{p.title}</strong></div>
-                  <span style={{ fontSize: '0.7rem', color: '#93C5FD', display: 'block', marginTop: '4px' }}>[{p.category}]</span>
-                  <span className="project-link">📖 Case Study →</span>
+                  <div className="project-description"><strong style={{fontSize: '1.05rem', color: '#EDF2FF'}}>{p.title}</strong></div>
+                  <span style={{ fontSize: '0.75rem', color: '#93C5FD', display: 'block', margin: '4px 0' }}>[{p.category}]</span>
+                  <div className="project-description-text">{p.problem.substring(0, 100)}...</div>
+                  <div className="tech-stack-row">
+                    {p.tech.slice(0, 4).map(t => <span key={t} className="tech-badge">{t}</span>)}
+                  </div>
+                  <span className="project-link" style={{marginTop: 'auto'}}>📖 Case Study →</span>
                 </div>
               ))}
             </div>
@@ -352,17 +388,18 @@ export default function Home() {
             <div style={{ marginBottom: '1.5rem' }}>
               <p style={{ marginBottom: '0.8rem' }}><span className="highlight-text">💼 Professional Experience:</span></p>
               <ul style={{ listStyleType: 'none', paddingLeft: '1rem', borderLeft: '2px solid #3B82F6', marginLeft: '0.5rem' }}>
-                <li style={{ marginBottom: '1.2rem', position: 'relative' }}>
-                  <span style={{ position: 'absolute', left: '-1.38rem', top: '0.3rem', width: '12px', height: '12px', background: '#60A5FA', borderRadius: '50%', boxShadow: '0 0 10px #60A5FA' }}></span>
-                  <strong style={{ fontSize: '1.1rem', color: '#EDF2FF' }}>Full-Stack Developer</strong> <span style={{ color: '#93C5FD' }}>@ OTech Engineering and Solutions</span><br />
-                  <span style={{ fontSize: '0.85rem', color: '#94A3B8', display: 'inline-block', marginBottom: '0.3rem' }}>Since mid-2018 (E.C.) - Present</span><br />
-                  <span style={{ fontSize: '0.9rem', color: '#CBD5E1' }}>Developing high-end full-stack applications, robust backend architectures, and real-world software solutions.</span>
+                <li className="experience-item" style={{ marginBottom: '1.2rem', position: 'relative' }}>
+                  <span style={{ position: 'absolute', left: '-2.38rem', top: '1.3rem', width: '12px', height: '12px', background: '#60A5FA', borderRadius: '50%', boxShadow: '0 0 10px #60A5FA' }}></span>
+                  <strong className="attractive-role" style={{ fontSize: '1.2rem' }}>Full-Stack Developer <span className="erp-badge">ERP Developer</span></strong><br />
+                  <span style={{ color: '#93C5FD', fontWeight: 'bold' }}>@ OTech Engineering and Solution Company</span><br />
+                  <span style={{ fontSize: '0.85rem', color: '#94A3B8', display: 'inline-block', marginBottom: '0.3rem' }}><i>September 20, 2025 - Present</i></span><br />
+                  <span className="premium-text" style={{ fontSize: '0.95rem' }}>Developing high-end full-stack applications, implementing <i>robust ERP systems</i>, and architecting scalable enterprise solutions.</span>
                 </li>
-                <li style={{ position: 'relative' }}>
-                  <span style={{ position: 'absolute', left: '-1.38rem', top: '0.3rem', width: '12px', height: '12px', background: '#60A5FA', borderRadius: '50%', boxShadow: '0 0 10px #60A5FA' }}></span>
+                <li className="experience-item" style={{ position: 'relative' }}>
+                  <span style={{ position: 'absolute', left: '-2.38rem', top: '1.3rem', width: '12px', height: '12px', background: '#60A5FA', borderRadius: '50%', boxShadow: '0 0 10px #60A5FA' }}></span>
                   <strong style={{ fontSize: '1.1rem', color: '#EDF2FF' }}>Project Development & Participation</strong> <span style={{ color: '#93C5FD' }}>@ MAU University</span><br />
-                  <span style={{ fontSize: '0.85rem', color: '#94A3B8', display: 'inline-block', marginBottom: '0.3rem' }}>Since 2015 (E.C.)</span><br />
-                  <span style={{ fontSize: '0.9rem', color: '#CBD5E1' }}>Active participant in university-level project development, coding bootcamps, and engineering initiatives.</span>
+                  <span style={{ fontSize: '0.85rem', color: '#94A3B8', display: 'inline-block', marginBottom: '0.3rem' }}><i>Since 2015 (E.C.)</i></span><br />
+                  <span className="premium-text" style={{ fontSize: '0.9rem' }}>Active participant in university-level project development, coding bootcamps, and engineering initiatives.</span>
                 </li>
               </ul>
             </div>
@@ -380,8 +417,8 @@ export default function Home() {
           {/* CONTACT SECTION WITH SMART FREELANCE INPUTS */}
           <section id="contact" className="section-card" data-section="contact">
             <h2 className="section-title">📡 Let’s connect & Hire</h2>
-            <p><span className="highlight-text">📞 Phone:</span> +251 920939012 / +251 983664549 &nbsp;|&nbsp; <span className="highlight-text">📧 Email:</span> lami28807@gmail.com</p>
-            <p><span className="highlight-text">💬 Telegram:</span> @akkakeefanjiraadhedhuga</p>
+            <p className="premium-text"><span className="highlight-text">📞 Phone:</span> +251 920939012 / +251 983664549 &nbsp;|&nbsp; <span className="highlight-text">📧 Email:</span> lami28807@gmail.com</p>
+            <p className="premium-text"><span className="highlight-text">💬 Telegram:</span> @akkakeefanjiraadhedhuga</p>
             <div className="social-links">
               <a href="https://github.com/lami-chemeda.github.io" target="_blank" rel="noopener noreferrer">🐙 GitHub / lamichemeda</a>
               <a href="#" target="_blank">🔗 website github.com/Lami-Chemeda</a>

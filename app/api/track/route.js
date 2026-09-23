@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { addVisitor } from '@/lib/db';
-
 export async function POST(request) {
   try {
     const data = await request.json();
