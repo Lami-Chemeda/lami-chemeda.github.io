@@ -221,7 +221,7 @@ export default function Home() {
       <header>
         <div className="header-container">
           <div className="logo">
-            <h1>⚡ LAMI CHMEDA • FULL‑STACK</h1>
+            <h1>⚡ LAMI CHEMEDA • FULL‑STACK</h1>
           </div>
           <nav id="navbar">
             <a href="#home" className="nav-link" data-section="home">🏠 HOME</a>
