@@ -29,7 +29,7 @@ export default function DevTerminal() {
         response = '⚡ Core Skills: React Native (95%), ASP.NET (100%), Node.js (95%), Python (95%), Java/Android (100%), MySQL/MongoDB (95%).';
         break;
       case 'experience':
-        response = '💼 5+ Years Full-Stack Developer @ OTech Engineering and Solutions. Key projects: Ethiopian e-Voting Platform, Currency Converters, Enterprise Systems.';
+        response = '💼  Full-Stack Developer  in MAU   start from  setember 20 2024 and  ERP developer in @ OTech Engineering and Solutions start from September 20, 2025 - Present. Key projects: Ethiopian e-Voting Platform, Currency Converters app,  Student online registration system, Employee information management system,ERP for many company.';
         break;
       case 'hire':
         response = '🟢 3 Reasons to Hire Lami: 1) Proven Track Record with Nationwide Enterprise Apps. 2) Clean Architecture & Fast Delivery. 3) 100% Client Satisfaction.';
