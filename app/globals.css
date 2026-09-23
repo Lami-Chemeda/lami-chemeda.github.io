@@ -41,7 +41,7 @@ header {
 }
 
 .header-container {
-  max-width: 1400px;
+  max-width: 1920px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -97,11 +97,11 @@ nav {
 
 /* main layout */
 .main-grid {
-  max-width: 1400px;
+  max-width: 1920px;
   margin: 2rem auto;
-  padding: 0 2rem;
+  padding: 0 3%;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 /* left profile card (glassy + vibrant) */
@@ -140,15 +140,21 @@ nav {
   transform: scale(1.05) rotate(2deg);
 }
 .profile-name {
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 2.2rem;
+  font-weight: 900;
   margin-top: 1.5rem;
-  background: linear-gradient(120deg, #FDE047, #FACC15);
+  background: linear-gradient(120deg, #FDE047, #FACC15, #F59E0B);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: -0.5px;
-  text-shadow: 0 4px 12px rgba(250, 204, 21, 0.3);
+  text-shadow: 0 4px 12px rgba(250, 204, 21, 0.4);
+  animation: pulseGlow 3s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { text-shadow: 0 4px 12px rgba(250, 204, 21, 0.4); filter: brightness(1); }
+  100% { text-shadow: 0 4px 20px rgba(250, 204, 21, 0.8); filter: brightness(1.2); }
 }
 .profile-bio {
   margin-top: 0.8rem;
