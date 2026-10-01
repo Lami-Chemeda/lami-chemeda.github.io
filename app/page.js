@@ -19,6 +19,35 @@ function AnalyticsMap() {
   return <div ref={mapRef} style={{ display: 'flex', justifyContent: 'center', overflow: 'hidden', borderRadius: '1rem', padding: '1rem', background: 'rgba(15, 23, 42, 0.4)', border: '1px solid rgba(59, 130, 246, 0.2)' }} />;
 }
 
+const PERSON_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Lami Chemeda',
+  jobTitle: 'Full-Stack Developer & ERP Developer',
+  description:
+    'Full-stack developer and ERP specialist building scalable web, mobile, and enterprise solutions in Ethiopia.',
+  url: 'https://lami-chemeda-github-io-75n7.vercel.app',
+  sameAs: [
+    'https://github.com/Lami-Chemeda',
+    'https://www.linkedin.com/in/lami-chemeda'
+  ],
+  knowsAbout: [
+    'React Native',
+    'ASP.NET',
+    'Node.js',
+    'Python',
+    'MySQL',
+    'MongoDB',
+    'ERP Systems',
+    'Full-Stack Development'
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Addis Ababa',
+    addressCountry: 'Ethiopia'
+  }
+};
+
 const ALL_PROJECTS = [
   {
     id: 'egovs-supervisor',
@@ -206,6 +235,11 @@ export default function Home() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_SCHEMA) }}
+      />
+
       {/* EmailJS SDK */}
       <Script 
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" 
@@ -420,8 +454,8 @@ export default function Home() {
             <p className="premium-text"><span className="highlight-text">📞 Phone:</span> +251 920939012 / +251 983664549 &nbsp;|&nbsp; <span className="highlight-text">📧 Email:</span> lami28807@gmail.com</p>
             <p className="premium-text"><span className="highlight-text">💬 Telegram:</span> @akkakeefanjiraadhedhuga</p>
             <div className="social-links">
-              <a href="https://github.com/lami-chemeda.github.io" target="_blank" rel="noopener noreferrer">🐙 GitHub / lamichemeda</a>
-              <a href="#" target="_blank">🔗 website github.com/Lami-Chemeda</a>
+              <a href="https://github.com/Lami-Chemeda" target="_blank" rel="noopener noreferrer">🐙 GitHub / Lami-Chemeda</a>
+              <a href="https://lami-chemeda-github-io-75n7.vercel.app" target="_blank" rel="noopener noreferrer">🔗 Portfolio Website</a>
             </div>
             <h3 style={{ margin: '1.2rem 0 0.5rem 0' }}>✍️ Start a Project / Send Message</h3>
             <form className="contact-form" onSubmit={handleContactSubmit}>
